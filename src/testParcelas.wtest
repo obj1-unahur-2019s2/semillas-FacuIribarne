@@ -1,0 +1,36 @@
+import parcelas.*
+import semillas.*
+
+
+describe " test parcelas " {
+	var parcela = new Parcela()
+	var soja = new Soja()
+	var soja2 = new Soja()
+	var soja3 = new Soja()
+	var soja4 = new Soja()
+	
+	fixture {
+		parcela.largo(1)
+		parcela.ancho(20)
+		parcela.horasDeSol(8)
+		parcela.superficie(20)
+		parcela.cantidadMaxima(4)
+		parcela.plantarUnaPlanta(soja)
+		parcela.plantarUnaPlanta(soja2)
+		parcela.plantarUnaPlanta(soja3)
+		parcela.plantarUnaPlanta(soja4)
+		soja.horasDeSol
+	}
+	test "parcela"{
+		parcela.plantarUnaPlanta(soja)
+		parcela.plantarUnaPlanta(soja2)
+		parcela.plantarUnaPlanta(soja3)
+		parcela.plantarUnaPlanta(soja4)
+	}
+}
+
+//*Una parcela de 20 metros de ancho por 1 metro de largo que recibe 8 horas 
+//*de sol por día, tiene una superficie de 20 metros cuadrados y la cantidad 
+//*máxima de plantas que tolera es 4.
+
+//**

@@ -6,9 +6,11 @@ A raíz de la [polémica](https://www.elancasti.com.ar/opinion/2018/11/27/ley-cu
 
 ## 1. Plantas
 
-Comenzaremos modelando a cada una de las plantas que hay en la huerta, de las cuales podemos configurar los siguientes aspectos:
+Comenzaremos modelando a cada una de las plantas que hay en la huerta, 
+de las cuales podemos configurar los siguientes aspectos:
 
-* el **año de obtención** de la semilla. Es decir, en qué año la semilla que le dio origen se sacó de su planta "madre";
+* el **año de obtención** de la semilla. Es decir, 
+en qué año la semilla que le dio origen se sacó de su planta "madre";
 * la **altura** que tiene, medida en metros.
 
 Además, queremos poder preguntarle:
@@ -18,16 +20,28 @@ Además, queremos poder preguntarle:
 * si **da nuevas semillas** o no;
 * cuánto **espacio** ocupa una vez plantada, medido en metros cuadrados.
 
-De todos ellos, el año de obtención y la altura se configuran para cada planta; el resto se calcula en función de la especie y de características generales.
+De todos ellos, el año de obtención y la altura se configuran para
+ cada planta; el resto se calcula en función de la especie y de 
+ características generales.
 
-Se dice que una planta **es fuerte** si tolera más de 10 horas de sol al día, esto es igual para todas las plantas. El cálculo de las **horas de sol que tolera** depende exclusivamente de cada especie (ver más abajo).
+Se dice que una planta **es fuerte** si tolera más de 10 horas de sol al 
+día, esto es igual para todas las plantas. El cálculo de las 
+**horas de sol que tolera** depende exclusivamente de cada especie
+ (ver más abajo).
 
-Otro aspecto que nos interesa es saber si **da nuevas semillas**, para lo cual se tiene que cumplir que la planta sea fuerte _o bien_ una condición alternativa, que define cada especie. En cuanto al **espacio que ocupa**, depende pura y exclusivamente de características de la especie.
+Otro aspecto que nos interesa es saber si **da nuevas semillas**, 
+para lo cual se tiene que cumplir que la planta sea fuerte _o bien_ 
+una condición alternativa, que define cada especie. En cuanto al
+ **espacio que ocupa**, depende pura y exclusivamente de características
+  de la especie.
 
 Contemplaremos las especies que se detallan a continuación.
 
 ### Menta
-Tolera seis horas de sol al día. Como condición alternativa para saber si da semillas, hay que mirar si su `altura` es mayor a 0.4 metros. Como crece al ras del suelo, diremos que el espacio que ocupa es su altura multiplicada por 3.
+Tolera seis horas de sol al día. Como condición alternativa para 
+saber si da semillas, hay que mirar si su `altura` es mayor a 0.4 metros. 
+Como crece al ras del suelo, diremos que el espacio que ocupa es su 
+altura multiplicada por 3.
 
 Ejemplos:
 * una menta de 1 metro, debería dar semillas y ocupar un espacio de 3 metros cuadrados.
@@ -39,12 +53,23 @@ La tolerancia al sol depende de su altura:
 * entre 0.5 y 1 metro: 7 horas;
 * más de 1 metro: 9 horas;
 
-La condición alternativa para que de semillas es que su propia semilla sea de obtención reciente (posterior al 2007) y además su altura sea de más de 1 metro. El espacio que ocupa es la mitad de su altura.
+La condición alternativa para que de semillas es que su propia 
+semilla sea de obtención reciente (posterior al 2007) y 
+además su altura sea de más de 1 metro. 
 
-Por ejemplo, si tuviesemos una soja de 0.6 metros y de semilla de 2009, la planta tendría una tolerancia al sol de 7 horas, no daría semillas y ocuparía 0.3 metros cuadrados.
+El espacio que ocupa es la mitad de su altura.
+
+Por ejemplo, si tuviesemos una soja de 0.6 metros y de semilla de 2009, 
+la planta tendría una tolerancia al sol de 7 horas, no daría semillas y
+ ocuparía 0.3 metros cuadrados.
 
 ### Quinoa
-Existen muchas cepas de esta nutritiva planta andina y es por eso que la cantidad de horas de sol que tolera la configuraremos para cada planta. Ocupa siempre 0.5 metros cuadrados y la condición alternativa para saber si da semillas es que el año de obtención de la semilla que le dio origen sea anterior al 2005.
+Existen muchas cepas de esta nutritiva planta andina y 
+es por eso que la cantidad de horas de sol que tolera la
+ configuraremos para cada planta. Ocupa siempre 0.5 metros 
+ cuadrados y la condición alternativa para saber si da semillas es 
+ que el año de obtención de la semilla que le dio origen sea anterior 
+ al 2005.
 
 Por ejemplo:
 * si tenemos una quinoa que tolera 12 horas de sol y su semilla de origen es de 2010, se trata de una planta que da semillas.

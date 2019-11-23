@@ -1,0 +1,41 @@
+import semillas.*
+
+describe " test plantas " {
+
+	var menta = new Menta()
+	var menta1 = new Menta()
+	var soja = new Soja()
+	var quinoa = new Quinoa()
+	var quinoa2 = new Quinoa()
+
+	fixture {
+		menta.altura(1)
+		menta1.altura(0.3)
+		soja.anio(2009)
+		soja.altura(0.6)
+		quinoa.horasDeSol(12)
+		quinoa.anio(2010)
+		quinoa2.horasDeSol(9)
+		quinoa2.anio(2001)
+	}
+
+	test "menta" {
+		assert.that(menta.daSemillas())
+		assert.equals(3, menta.espacio())
+		assert.notThat(menta1.daSemillas())
+		assert.equals(0.9, menta1.espacio())
+	}
+
+	test "soja" {
+		assert.equals(7, soja.horasDeSol())
+		assert.notThat(soja.daSemillas())
+		assert.equals(0.3, soja.espacio())
+	}
+
+	test "quinoa" {
+		assert.that(quinoa.daSemillas())
+		assert.that(quinoa2.daSemillas())
+	}
+
+}
+
